@@ -1,0 +1,57 @@
+#1)
+
+```{r sectionone}
+# Create first matrix
+Avector <- c(1, -1, -1, -1)
+A <- matrix(Avector, nrow = 2)
+#Create second matrix
+Bvector <- c(2, 3, -1, -2)
+B <- matrix(Bvector, nrow = 2)
+#Create third matrix
+Cvector <- c(1, 0, 0, 0)
+C <- matrix(Cvector, nrow = 2)
+#Create fourth matrix
+Dvector <- c(0, 1, 0, 1, 0, 0, 0, 0, 1)
+D <- matrix(Dvector, nrow = 3)
+#Create fifth matrix
+Evector <- c(1, 0, 0, 0, 0, 1, 0, 1, 0)
+E <- matrix(Evector, nrow = 3)
+```
+
+#2)
+```{r sectiontwo}
+A*A == A
+B*B == B
+C*C == C
+D*D == D
+E*E == E
+```
+So C, D, and E are idempotent.
+
+#3)
+
+```{r sectionthree}
+invertible.A <- A
+invertible.A == t(A)
+invertible.B <- B
+invertible.B == t(B)
+invertible.C <- C
+invertible.C == t(C)
+invertible.D <- D
+invertible.D == t(D)
+invertible.E <- E
+invertible.E == t(E)
+```
+
+So A, C, D, and E are orthogonal.
+
+#4
+```{r sectionfour}
+vector <- c(1:10)
+array <- array(1:27, dim = c(3, 3, 3))
+df1 <- 5:14
+df2 <- -14:-5
+dataframe <- data.frame(df1, df2)
+embeddedlist <- list(1, 2, 3)
+list <- list(vector, E, array, dataframe, embeddedlist)
+list
