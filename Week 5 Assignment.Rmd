@@ -1,0 +1,21 @@
+#1
+In R, preallocation is when you add elements to a list, dataframe, or vector at its time of creation. Ammending is used when you want to first create an empty list, dataframe, or vector and then add elements or if you wish to add elements to a list, dataframe, or vector that you may have already created. If you know all the elements you want to include when you first create a list, dataframe, or vector it is more efficent to preallocate. But if you need to add elements to a list, dataframe, or vector that you've already created, it is more efficent to ammend than to delete and recreate your list, dataframe, or vector. 
+```{r q1}
+#Preallocating
+cv <- c('Cat', 'Dog', 'Bird', 'Snake', 'Mouse')
+nv <- c(seq(0,40,10))
+f <- as.factor(cv)
+df <- data.frame(cv, nv)
+list <- list(df, f)
+#Ammending
+cv[[6]] <- 'Horse'
+df[['nv2']] <- 4:0
+list[[3]] <- c(seq(0,99,9))
+```
+#2
+```{r q2}
+require(MASS)
+NewDataFrame <- data.frame(Boston['crim'], Boston['ptratio'], Boston['medv'])
+names(NewDataFrame) <- c("Crime Rate", "Pupil to Teacher Ratio", "Median Home Value")
+NewDataFrame
+```
